@@ -1,0 +1,74 @@
+/* global.css styles */
+
+/* @group resets and elements */
+* { margin: 0; padding: 0; }
+
+html { height: 101%; font-family: “Helvetica Neue”, Arial, Helvetica, sans-serif; background: #fff; }
+body { font-size: 62.5%; font-family: Helvetica, Arial, sans-serif; line-height: 10%; }
+
+img { border: 0;}
+
+a { color: #07626C; text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+ul { line-height: 120%; }
+
+p { font-size: 1.2em; line-height: 1.4em; font-family: Arial, sans-serif; color: #333; margin-bottom: 15px; }
+h1 { font-family: Helvetica, Arial, Verdana, sans-serif; color: #444; font-weight: bold; font-size: 1.7em; line-height: 2.0em; }
+h2 { font-family: Georgia, Tahoma, sans-serif; font-style: italic; font-size: 1.4em; letter-spacing: -0.04em; line-height: 1.8em; }
+h3 { color: #698216; font-weight: normal; font-size: 1.3em; line-height: 1.6em;  }
+h4 { color: #232323; font-family: Arial, Tahoma, sans-serif; font-size: 1.1em; line-height: 1.3em; margin-bottom: 10px; }
+
+/* @group core */
+.wrapper { width: 850px; overflow: hidden; margin: 0 auto; background: none; }
+
+header { height: 50px; background-color: #afafaf; }
+
+header #usernav { float: right; line-height: 50px; font-size: 14px; font-weight: bold; color: #555; }
+header #usernav a { color: #444; text-shadow: 0px 1px 1px #ddd; }
+
+header #usernav a span img { position: relative; top: 8px; background: #cecece; margin-left: 5px; padding: 3px; border: 1px solid #969696; }
+
+#content { display: block; width: 820px; margin: 0 auto;  }
+
+#center { display: block; width: 800px; float: left; overflow: hidden; margin-right: auto; margin-left: auto; }
+
+
+/* @group navigation */
+nav { width: auto; background: #eee; height: 45px; border-bottom: 1px solid #dadada; margin-bottom: 30px; }
+
+ul#n { width: 850px; margin-left:auto; margin-right:auto; display: block; list-style: none;  }
+ul#n li { float: left; line-height: 45px; border: 3px solid #eee; border-top: 0px; border-bottom: 0px; }
+ul#n li a { display: block; padding: 0 11px; color: #969696; font-size: 15px; font-weight: bold; text-shadow: 0px 1px 1px #fff; }
+
+ul#n li.sel { background: #E7D367; border: 3px solid #BE921B; border-top: 0px; border-bottom: 0px; }
+ul#n li.sel a { color: #fff; text-shadow: 0px 1px 2px #88b618; }
+
+/* @group left */
+#userStats { display: block; width: auto; background-color: #f9f9f9; border: 1px solid #ccc; -moz-border-radius: 5px; -webkit-border-radius: 5px; border-radius: 5px; padding: 12px; }
+
+#userStats .pic { float: left; display: block; margin-right: 10px; }
+#userStats .pic a img { padding: 7px; background: #fff; border: 1px solid #ccc; }
+
+#userStats .data { float: left; display: block; position:  center; width: 595px; height: 166px; padding: 4px; padding-left: 15px; background: #e6e6e6; overflow:  hidden; box-sizing: border-box; -moz-box-sizing: border-box; }
+#userStats .data h1 { margin-left: auto; margin-right: auto; color: #474747; line-height: 1.6em; text-shadow: 0px 1px 1px #fff; }
+#userStats .data h3 { color: #666; line-height: 0.9em; margin-bottom: 5px; }
+#userStats .data h4 { font-size: 1.2em; line-height: 1.3em; }
+
+#userStats .data .socialMediaLinks { position: absolute; right: 6px; top: 8px; }
+#userStats .data .socialMediaLinks a img { margin-right: 5px; }
+
+#userStats .data .sep {  margin-top: 40px; width: 320px; height: 1px;  margin-bottom: 0; }
+#userStats .data ul.numbers { list-style: none; width: 320px; padding-top: 7px; margin-top: 0; color: #676767; }
+#userStats .data ul.numbers li { margin-left: auto; margin-right: auto; width: 95px; float: left; display: block; padding-left: 40px; height: 50px;  }
+#userStats .data ul.numbers li strong { margin-left: auto; margin-right: auto; color: #434343; display: block; font-size: 3.4em; line-height: 1.1em; font-weight: bold; }
+
+/* @group right */
+/** @group clearfix **/
+.clearfix:after { content: "."; display: block; clear: both; visibility: hidden; line-height: 0; height: 0; }
+.clearfix { display: inline-block; }
+ 
+html[xmlns] .clearfix { display: block; }
+* html .clearfix { height: 1%; }
+
+.nobrdr { border: 0px !important; }

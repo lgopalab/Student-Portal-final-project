@@ -1,0 +1,132 @@
+<html>
+<head>
+	<title>Student Information Portal</title>    
+<link href="css/login.css" rel="stylesheet" type="text/css" />
+<link href="fonts/pacifico/stylesheet.css" rel="stylesheet" type="text/css" />
+
+
+<script src="js/jquery.js"></script>
+<script src="js/validate.js"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+$(".studentloginform").validate({
+    
+        // Specify the validation rules
+        rules: {
+            usernameleft: "required",
+            passwordleft: "required"
+        },
+        
+        // Specify the validation error messages
+        messages: {
+            usernameleft: "Enter username (only firstname)",
+            passwordleft: "Enter Password eg: 10211a0501 not 10211A0501"
+        },
+        
+        submitHandler: function(form) {
+            form.submit();
+        }
+    });
+$(".facultyloginform").validate({
+    
+        // Specify the validation rules
+        rules: {
+            usernameright: "required",
+            passwordright: "required"
+        },
+        
+        // Specify the validation error messages
+        messages: {
+            usernameright: "Enter username (only firstname)",
+            passwordright: "Enter Password eg: 10211a0501 not 10211A0501"
+        },
+        
+        submitHandler: function(form) {
+            form.submit();
+        }
+    });	
+
+
+	$(".usernameright").focus(function() {
+		$(".user-icon-right").css("left","-48px");
+	});
+	$(".usernameright").blur(function() {
+		$(".user-icon-right").css("left","0px");
+	});
+	
+	$(".passwordright").focus(function() {
+		$(".pass-icon-right").css("left","-48px");
+	});
+	$(".passwordright").blur(function() {
+		$(".pass-icon-right").css("left","0px");
+	});
+	$(".usernameleft").focus(function() {
+		$(".user-icon-left").css("left","-48px");
+	});
+	$(".usernameleft").blur(function() {
+		$(".user-icon-left").css("left","0px");
+	});
+	
+	$(".passwordleft").focus(function() {
+		$(".pass-icon-left").css("left","-48px");
+	});
+	$(".passwordleft").blur(function() {
+		$(".pass-icon-left").css("left","0px");
+	});
+});
+</script>
+
+</head>
+<body>
+
+	<div class="heading">
+    	Info Place @ BVRIT
+    </div>
+    
+<div id="wrapperleft">
+    <div class="user-icon-left"></div>
+    <div class="pass-icon-left"></div>
+
+<form name="studentloginform" class="studentloginform" action="student/redirect.php" method="post">
+
+	<div class="header">
+    <h1>Student Login</h1>
+    </div>
+	
+	<div class="content">
+	<input name="usernameleft" type="text" class="input usernameleft" placeholder="Username" />
+    <input name="passwordleft" type="password" class="input passwordleft" placeholder="Password" />
+    </div>
+       
+    <div class="footer">
+    <input type="submit" name="submit" value="Login" class="button" />
+    </div>
+   
+</form>
+</div>
+
+<div id="wrapperright">
+	<div class="user-icon-right"></div>
+    <div class="pass-icon-right"></div>
+
+<form name="facultyloginform" class="facultyloginform" action="" method="post">
+
+	<div class="header">
+    <h1>Faculty Login</h1>
+    </div>
+	
+    <div class="content">
+	<input name="usernameright" type="text" class="input usernameright" placeholder="Username" />
+    <input name="passwordright" type="password" class="input passwordright" placeholder="Password" />
+    </div>
+    
+    <div class="footer">
+   <input type="submit" name="submit" value="Login" class="button" />
+    </div>
+
+</form>
+
+
+
+</body>
+</html>
